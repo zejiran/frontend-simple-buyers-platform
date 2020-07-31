@@ -4,8 +4,7 @@
 
 - [Overview](#overview)
 - [Used Technologies](#used-technologies)
-- [Features](#featuresendpoints)
-    - [Load data to database](#1-load-data-to-database)
+- [Features](#features)
 - [License](#license)
 
 ## Overview
@@ -22,6 +21,15 @@ that represents a simple buyer platform.
 - Interface: Vue.js & Vuetify.
 
 ## Features
+
+### Web interface:
+
+- Allow to select a date to sincronize (see
+ <a href='https://github.com/zejiran/backend-simple-buyers-platform#1-load-data-to-database'>data load to database</a>).
+- Allow to see all buyers (see
+ <a href='https://github.com/zejiran/backend-simple-buyers-platform#2-list-buyers'>list buyers</a>).
+- Allow seeing buyer's page with its correspondant information (see 
+ <a href='https://github.com/zejiran/backend-simple-buyers-platform#3-query-buyers'>query buyers</a>).
 
 ## License
 
