@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app dark color="#EE2000" bottom>
+    <v-app-bar dark color="#EE2000" bottom>
         <v-spacer></v-spacer>
         <v-btn
                 href="https://github.com/zejiran/backend-simple-buyers-platform"
