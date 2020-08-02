@@ -1,7 +1,11 @@
 <template>
-    <div class="buyers text-center">
-        <h1 class="subheading pt-16">List of Buyers</h1>
-        <v-container class="my-5">
+    <div class="buyers">
+        <v-app-bar app>
+            <h1 class="overline text-6">Our list of Buyers</h1>
+            <v-spacer></v-spacer>
+            <SearchBar/>
+        </v-app-bar>
+        <v-container class="my-5 text-center">
             <v-layout row wrap>
                 <v-flex xs12 sm6 md4 lg3 v-for="buyer in buyers" :key="buyer.id">
                     <v-card class="ma-3" shaped>
@@ -28,8 +32,11 @@
 </template>
 
 <script>
+    import SearchBar from '@/components/SearchBar'
+
     export default {
         name: 'Buyers',
+        components: {SearchBar},
         data() {
             return {
                 buyers: [
