@@ -6,7 +6,7 @@
                 <v-img alt="Buyers Logo" class="mx-auto" contain src="../assets/logo.png" transition="scale-transition"
                        width="400"/>
                 <p class="headline text-center mb-15">This is a Vue.js app that represents a simple buyer platform.</p>
-                <v-row :align="alignment" :justify="justify">
+                <v-row class="mb-16">
                     <v-btn x-large color="#EE2000" class="mx-auto">
                         <v-icon left large>mdi-human-handsup</v-icon>
                         <span>Our buyers</span>
