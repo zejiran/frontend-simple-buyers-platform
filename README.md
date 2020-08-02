@@ -8,13 +8,16 @@
 - [Overview](#overview)
 - [Used Technologies](#used-technologies)
 - [Features](#features)
+- [Usage](#usage)
 - [License](#license)
 
 ## Overview
 
 Vue.js app consuming services from 
-<a href='https://github.com/zejiran/backend-simple-buyers-platform'>zejiran/backend-simple-buyers-platform</a>
+[zejiran/backend-simple-buyers-platform](https://github.com/zejiran/backend-simple-buyers-platform)
 that represents a simple buyer platform.
+
+<img src='screenshot' width="40%" alt="Screenshot">
 
 ## Used Technologies
 
@@ -33,6 +36,14 @@ that represents a simple buyer platform.
  <a href='https://github.com/zejiran/backend-simple-buyers-platform#2-list-buyers'>list buyers</a>).
 - Allow seeing buyer's page with its correspondant information (see 
  <a href='https://github.com/zejiran/backend-simple-buyers-platform#3-query-buyers'>query buyers</a>).
+ 
+## Usage
+
+1. Follow usage [instructions](https://github.com/zejiran/backend-simple-buyers-platform#usage) for setup backend.
+2. Run 
+[commands](https://github.com/zejiran/frontend-simple-buyers-platform/tree/master/buyer-platform#buyer-platform) 
+for setup frontend.
+3. Visit and explore app running at development or production server.
 
 ## License
 
