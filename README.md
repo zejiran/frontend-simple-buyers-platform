@@ -17,7 +17,7 @@ Vue.js app consuming services from
 [zejiran/backend-simple-buyers-platform](https://github.com/zejiran/backend-simple-buyers-platform)
 that represents a simple buyer platform.
 
-<img src='screenshot' width="40%" alt="Screenshot">
+<img src="https://i.ibb.co/h2NLwTb/desktop.gif" width="50%" alt="Screenshot-md">
 
 ## Used Technologies
 
@@ -44,6 +44,8 @@ that represents a simple buyer platform.
 [commands](https://github.com/zejiran/frontend-simple-buyers-platform/tree/master/buyer-platform#buyer-platform) 
 for setup frontend.
 3. Visit and explore app running at development or production server.
+
+<img src="https://i.ibb.co/G3qnMCb/mobile.gif" width="30%" alt="Screenshot-sm">
 
 ## License
 
