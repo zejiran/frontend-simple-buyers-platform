@@ -17,7 +17,7 @@ Vue.js app consuming services from
 [zejiran/backend-simple-buyers-platform](https://github.com/zejiran/backend-simple-buyers-platform)
 that represents a simple buyer platform.
 
-<img src="https://i.ibb.co/h2NLwTb/desktop.gif" width="50%" alt="Screenshot-md">
+<img src="https://i.ibb.co/h2NLwTb/desktop.gif" width="65%" alt="Screenshot-md">
 
 ## Used Technologies
 
@@ -54,4 +54,4 @@ for setup frontend.
 - **[MIT license](LICENSE)**
 - Copyright 2020 © Juan Alegría.
 
-<img src='https://i.ibb.co/sWSrvyF/logo.png' width="40%" alt="Logo">
+<img src="https://i.ibb.co/sWSrvyF/logo.png" width="40%" alt="Logo">
