@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Buyers from '../views/Buyers.vue'
+import Buyer from '../views/Buyer.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
         path: '/buyers',
         name: 'Buyers',
         component: Buyers
+    },
+    {
+        path: '/buyer',
+        name: 'Buyer',
+        component: Buyer
     },
 ]
 

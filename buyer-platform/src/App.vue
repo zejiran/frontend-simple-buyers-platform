@@ -7,6 +7,7 @@
 </template>
 
 <script>
+    document.title = 'Buyers Platform'
     export default {
         name: 'App',
         data() {
