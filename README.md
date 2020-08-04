@@ -22,7 +22,9 @@ that represents a simple buyer platform.
 ## Used Technologies
 
 - Language: Go.
-- Database: Dgraph.
+- Database: MySQL (It was Dgraph. After trying to use it for a while 
+and can't get a good result, I have decided to use a different database.
+I would try to use it on this project when more documentation about Dgraph release).
 - API Router: ```chi```.
 - Interface: Vue.js & Vuetify.
 
