@@ -42,10 +42,10 @@ I would try to use it on this project when more documentation about Dgraph relea
 ## Usage
 
 1. Follow usage [instructions](https://github.com/zejiran/backend-simple-buyers-platform#usage) for setup backend.
-2. Run 
-[commands](https://github.com/zejiran/frontend-simple-buyers-platform/tree/master/buyer-platform#buyer-platform) 
-for setup frontend or just do ```cd buyer-platform``` and ```npm run serve```.
-3. Visit and explore app running at development or production server.
+2. ``` npm install```.
+3. ```npm run serve``` for compiles and hot-reloads for development or ```npm run build``` for
+ compiles and minifies for production.
+4. Visit and explore app running at development or production server.
 
 <img src="https://i.ibb.co/G3qnMCb/mobile.gif" width="30%" alt="Screenshot-sm">
 
