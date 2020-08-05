@@ -7,7 +7,7 @@
         </v-app-bar>
         <v-container class="my-5 text-center">
             <v-layout row wrap>
-                <v-flex xs12 sm6 md4 lg3 v-for="buyer in buyers" :key="buyer.id">
+                <v-flex :key="buyer.id" lg3 md4 sm6 v-for="buyer in buyers" xs12>
                     <v-card class="ma-3" shaped>
                         <v-responsive class="pt-4">
                             <v-avatar size="100">
@@ -16,12 +16,12 @@
                         </v-responsive>
                         <v-card-text>
                             <div class="subheading">{{ buyer.name }}</div>
-                            <div class="grey--text">{{ buyer.age}} years old</div>
+                            <div class="grey--text">{{ buyer.age }} years old</div>
                         </v-card-text>
                         <v-card-actions class="pb-4">
                             <v-btn :href="'/buyer' + '?' + 'id=' + buyer.id + '&name=' + buyer.name + '&age=' + buyer.age"
-                                   small color="#960200" class="mx-auto">
-                                <v-icon small left>mdi-information-outline</v-icon>
+                                   class="mx-auto" color="#960200" small>
+                                <v-icon left small>mdi-information-outline</v-icon>
                                 <span>See information</span>
                             </v-btn>
                         </v-card-actions>
@@ -34,13 +34,16 @@
 
 <script>
     import SearchBar from '@/components/SearchBar'
+    import axios from 'axios'
 
     export default {
         name: 'Buyers',
         components: {SearchBar},
         data() {
             return {
-                buyers: [
+                buyers:
+                // Test data if you don't want to create database
+                [
                     {name: 'Luffy', age: 20, id: 1},
                     {name: 'Zoro', age: 24, id: 2},
                     {name: 'Nami', age: 21, id: 3},
@@ -55,6 +58,12 @@
                     {name: 'Cocodrile', age: 28, id: 12},
                 ]
             }
+        },
+        mounted() {
+            axios.get('http://localhost:3717/buyers').then(response => {
+                console.log(JSON.parse(response.data.slice(0, -2) + "]"));
+                this.buyers = JSON.parse(response.data.slice(0, -2) + "]")
+            })
         }
     }
 </script>

@@ -44,7 +44,7 @@ I would try to use it on this project when more documentation about Dgraph relea
 1. Follow usage [instructions](https://github.com/zejiran/backend-simple-buyers-platform#usage) for setup backend.
 2. Run 
 [commands](https://github.com/zejiran/frontend-simple-buyers-platform/tree/master/buyer-platform#buyer-platform) 
-for setup frontend.
+for setup frontend or just do ```cd buyer-platform``` and ```npm run serve```.
 3. Visit and explore app running at development or production server.
 
 <img src="https://i.ibb.co/G3qnMCb/mobile.gif" width="30%" alt="Screenshot-sm">

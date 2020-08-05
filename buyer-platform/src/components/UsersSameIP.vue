@@ -36,6 +36,7 @@
     export default {
         data() {
             return {
+                // Test data if you don't want to create database
                 buyers: [
                     {name: 'Luffy', age: 20, id: 1},
                     {name: 'Zoro', age: 24, id: 2},
@@ -49,7 +50,7 @@
                     {name: 'Vivi', age: 22, id: 10},
                     {name: 'Doctorine', age: 16, id: 11},
                     {name: 'Cocodrile', age: 28, id: 12},
-                ],
+                ]
             }
         }
     }

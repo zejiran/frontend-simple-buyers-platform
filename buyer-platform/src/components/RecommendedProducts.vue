@@ -27,6 +27,7 @@
     export default {
         data() {
             return {
+                // Test data if you don't want to create database
                 products: [
                     {name: 'Gomu Gomu', price: '2000', id: 1},
                     {name: 'Nomu Nomu', price: '2434', id: 2},

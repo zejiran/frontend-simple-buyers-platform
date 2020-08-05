@@ -19,6 +19,7 @@
     export default {
         data() {
             return {
+                // Test data if you don't want to create database
                 transactions: [
                     {
                         id: '952175',
@@ -29,26 +30,6 @@
                         id: '234275',
                         device: 'mac',
                         products: 'Excalibur',
-                    },
-                    {
-                        id: '863568',
-                        device: 'android',
-                        products: 'Keyblade',
-                    },
-                    {
-                        id: '952175',
-                        device: 'linux',
-                        products: ['Going Merry', 'Icecream', 'Rock and Stone'].join(', '),
-                    },
-                    {
-                        id: '234275',
-                        device: 'mac',
-                        products: 'Excalibur',
-                    },
-                    {
-                        id: '863568',
-                        device: 'android',
-                        products: 'Keyblade',
                     },
                 ],
             }
