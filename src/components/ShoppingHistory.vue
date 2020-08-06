@@ -31,16 +31,16 @@
                     {
                         id: '952175',
                         device: 'linux',
-                        products: [{"name": "Going Merry", "price": 4423334, "id": "1342136bf"}, {
+                        products: [[{"name": "Going Merry", "price": 4423334, "id": "1342136bf"}],[{
                             "name": "Geuse",
                             "price": 434,
                             "id": "114567f"
-                        }]
+                        }]]
                     },
                     {
                         id: '234275',
                         device: 'mac',
-                        products: [{"name": "Veetee", "price": 4334, "id": "15c136bf"}],
+                        products: [[{"name": "Veetee", "price": 4334, "id": "15c136bf"}]],
                     },
                 ],
             }
