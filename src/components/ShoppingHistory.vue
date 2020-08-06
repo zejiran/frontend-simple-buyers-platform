@@ -48,22 +48,22 @@
         mounted() {
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-            const userId = urlParams.get('id')
+            const userId = urlParams.get('id');
             // Get transactions data by user id
             axios.get('http://localhost:3717/transaction/data/' + userId)
                 .then(response => {
-                    this.transactions = response.data
+                    this.transactions = response.data;
                 })
                 .then(() => Promise.all(this.transactions.map(transaction =>
                     axios.get('http://localhost:3717/transaction/products/' + transaction.id))))
                 .then(productsResponse => {
                     this.transactions = this.transactions.map(transaction => {
-                        const products = []
+                        const products = [];
                         productsResponse.forEach((p) => {
                             products.push(p.data)
-                        })
+                        });
                         return {...transaction, products};
-                    })
+                    });
                 });
         }
     }
