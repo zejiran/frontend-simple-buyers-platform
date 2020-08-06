@@ -61,8 +61,7 @@
         },
         mounted() {
             axios.get('http://localhost:3717/buyers').then(response => {
-                console.log(JSON.parse(response.data.slice(0, -2) + "]"));
-                this.buyers = JSON.parse(response.data.slice(0, -2) + "]")
+                this.buyers = response.data
             })
         }
     }
