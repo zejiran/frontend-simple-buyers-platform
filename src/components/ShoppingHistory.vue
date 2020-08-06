@@ -31,7 +31,7 @@
                     {
                         id: '952175',
                         device: 'linux',
-                        products: [[{"name": "Going Merry", "price": 4423334, "id": "1342136bf"}],[{
+                        products: [[{"name": "Going Merry", "price": 4423334, "id": "1342136bf"}], [{
                             "name": "Geuse",
                             "price": 434,
                             "id": "114567f"
@@ -51,9 +51,7 @@
             const userId = urlParams.get('id');
             // Get transactions data by user id
             axios.get('http://localhost:3717/transaction/data/' + userId)
-                .then(response => {
-                    this.transactions = response.data;
-                })
+                .then(response => this.transactions = response.data)
                 .then(() => Promise.all(this.transactions.map(transaction =>
                     axios.get('http://localhost:3717/transaction/products/' + transaction.id))))
                 .then(productsResponse => {

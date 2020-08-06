@@ -24,9 +24,13 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
         data() {
             return {
+                buyers: [],
+                transactions: [],
                 // Test data if you don't want to create database
                 products: [
                     {name: 'Gomu Gomu', price: '2000', id: 1},
@@ -41,6 +45,28 @@
                     {name: 'Ton Ton', price: '1634', id: 5},
                 ],
             }
+        },
+        mounted() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const userId = urlParams.get('id');
+            // Get transactions data by user id
+            axios.get('http://localhost:3717/transaction/data/' + userId)
+                .then(response => this.transactions = response.data)
+                .then(() => Promise.all(this.transactions.map(transaction =>
+                axios.get('http://localhost:3717/transaction/sameip/' + transaction.ip))))
+                .then(sameIpResponse => {
+                    const buyers = [];
+                    sameIpResponse.forEach((b) => {
+                        buyers.push(JSON.stringify(b.data).slice(1, -1) + ",")
+                    });
+                    this.buyers = JSON.parse("[" + buyers[0].slice(0, -1) + "]");
+                })
+                // Recommend products that the first user with the same IP bought
+                .then(() => axios.get('http://localhost:3717/transaction/data/' + this.buyers[0].id))
+                .then(transactionIpResponse => transactionIpResponse.data[0].id)
+                .then((transactionId) => axios.get('http://localhost:3717/transaction/products/' + transactionId))
+                .then(productsSameIp => this.products = productsSameIp.data);
         }
     }
 </script>
