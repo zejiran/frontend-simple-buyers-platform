@@ -1,26 +1,36 @@
 <template>
-    <div class="buyers">
-        <v-app-bar app>
-            <h1 class="overline">{{ $route.query.name }} information</h1>
-            <v-spacer></v-spacer>
+    <div>
+        <!--  When user id is valid. 0 is the id for bad queries-->
+        <div class="buyers" v-if="$route.query.id">
+            <v-app-bar app>
+                <h1 class="overline">{{ $route.query.name }} information</h1>
+                <v-spacer></v-spacer>
+                <v-btn href="/" text>
+                    <v-icon>mdi-home</v-icon>
+                </v-btn>
+            </v-app-bar>
+            <v-card class="mx-8 my-7" min-height="800">
+                <v-container>
+                    <v-layout class="mt-16 mr-10 ml-5" row>
+                        <v-flex md6 xs12>
+                            <ShoppingHistory/>
+                        </v-flex>
+                        <v-flex md6 xs12>
+                            <RecommendProducts/>
+                            <UsersSameIP/>
+                        </v-flex>
+                    </v-layout>
+                </v-container>
+            </v-card>
+            <CopyrightBar/>
+        </div>
+        <!--  Bad query or user search  -->
+        <div v-if="$route.query.id == 0">
+            <h1 class="overline">Invalid user please go back to home</h1>
             <v-btn href="/" text>
                 <v-icon>mdi-home</v-icon>
             </v-btn>
-        </v-app-bar>
-        <v-card class="mx-8 my-7" min-height="800">
-            <v-container>
-                <v-layout class="mt-16 mr-10 ml-5" row>
-                    <v-flex md6 xs12>
-                        <ShoppingHistory/>
-                    </v-flex>
-                    <v-flex md6 xs12>
-                        <RecommendProducts/>
-                        <UsersSameIP/>
-                    </v-flex>
-                </v-layout>
-            </v-container>
-        </v-card>
-        <CopyrightBar/>
+        </div>
     </div>
 </template>
 
