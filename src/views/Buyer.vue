@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--  When user id is valid. 0 is the id for bad queries-->
-        <div class="buyers" v-if="$route.query.id">
+        <div class="buyers" v-if="$route.query.id != 0">
             <v-app-bar app>
                 <h1 class="overline">{{ $route.query.name }} information</h1>
                 <v-spacer></v-spacer>
