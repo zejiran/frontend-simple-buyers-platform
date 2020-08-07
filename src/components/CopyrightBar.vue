@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar absolute dense dark color="#EE2000" flat bottom>
+    <v-app-bar absolute bottom color="#EE2000" dark dense flat>
         <v-btn href="https://github.com/zejiran/backend-simple-buyers-platform" target="_blank" text>
             <v-icon>mdi-code-tags</v-icon>
             <span class="mr-2 ml-2">made with</span>

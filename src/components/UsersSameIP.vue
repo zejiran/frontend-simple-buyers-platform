@@ -7,26 +7,26 @@
                            :prev-icon="prevIcon ? 'mdi-minus' : undefined"
                            :show-arrows="showArrows" class="pa-1"
                            v-model="model">
-                    <v-slide-item :key="buyer.id" v-for="buyer in buyers">
-                        <v-card class="ma-3 text-center" flat>
-                            <v-responsive class="pt-4">
-                                <v-avatar size="100">
-                                    <img :src="'https://api.adorable.io/avatars/' + buyer.id">
-                                </v-avatar>
-                            </v-responsive>
-                            <v-card-text>
-                                <div class="subheading">{{ buyer.name }}</div>
-                                <div class="grey--text">{{ buyer.age }} years old</div>
-                            </v-card-text>
-                            <v-card-actions class="pb-4">
-                                <v-btn :href="'/buyer' + '?' + 'id=' + buyer.id + '&name=' + buyer.name + '&age=' + buyer.age"
-                                       class="mx-auto" color="#960200" small>
-                                    <v-icon left small>mdi-information-outline</v-icon>
-                                    <span class="mr-2">Information</span>
-                                </v-btn>
-                            </v-card-actions>
-                        </v-card>
-                    </v-slide-item>
+                <v-slide-item :key="buyer.id" v-for="buyer in buyers">
+                    <v-card class="ma-3 text-center" flat>
+                        <v-responsive class="pt-4">
+                            <v-avatar size="100">
+                                <img :src="'https://api.adorable.io/avatars/' + buyer.id">
+                            </v-avatar>
+                        </v-responsive>
+                        <v-card-text>
+                            <div class="subheading">{{ buyer.name }}</div>
+                            <div class="grey--text">{{ buyer.age }} years old</div>
+                        </v-card-text>
+                        <v-card-actions class="pb-4">
+                            <v-btn :href="'/buyer' + '?' + 'id=' + buyer.id + '&name=' + buyer.name + '&age=' + buyer.age"
+                                   class="mx-auto" color="#960200" small>
+                                <v-icon left small>mdi-information-outline</v-icon>
+                                <span class="mr-2">Information</span>
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-slide-item>
             </v-slide-group>
         </v-sheet>
     </div>
@@ -68,9 +68,9 @@
                 .then(sameIpResponse => {
                     const buyers = [];
                     sameIpResponse.forEach((b) => {
-                        buyers.push(JSON.stringify(b.data).slice(1,-1) + ",")
+                        buyers.push(JSON.stringify(b.data).slice(1, -1) + ",")
                     });
-                    this.buyers = JSON.parse("["  + buyers[0].slice(0,-1)  + "]");
+                    this.buyers = JSON.parse("[" + buyers[0].slice(0, -1) + "]");
                 });
         }
     }

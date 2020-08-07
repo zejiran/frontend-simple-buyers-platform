@@ -54,7 +54,7 @@
             axios.get('http://localhost:3717/transaction/data/' + userId)
                 .then(response => this.transactions = response.data)
                 .then(() => Promise.all(this.transactions.map(transaction =>
-                axios.get('http://localhost:3717/transaction/sameip/' + transaction.ip))))
+                    axios.get('http://localhost:3717/transaction/sameip/' + transaction.ip))))
                 .then(sameIpResponse => {
                     const buyers = [];
                     sameIpResponse.forEach((b) => {
