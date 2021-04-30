@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: core-js
+    versions:
+    - 3.11.0
+  - dependency-name: vuetify
+    versions:
+    - 2.4.11
+    - 2.4.7
+  - dependency-name: sass
+    versions:
+    - 1.32.8
+  - dependency-name: "@vue/cli-service"
+    versions:
+    - 4.5.12
