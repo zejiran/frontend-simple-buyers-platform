@@ -49,6 +49,11 @@ I would try to use it on this project when more documentation about Dgraph relea
 
 <img src="https://i.ibb.co/G3qnMCb/mobile.gif" width="30%" alt="Screenshot-sm">
 
+## Docker
+
+1. Build Docker image of our app with: ```docker build -t computational-infrastructure/frontend-simple-buyers-platform .```
+2. Run app in a Docker container with ```docker run -it -p 8080:8080 --rm --name dockerize-front-buyers computational-infrastructure/frontend-simple-buyers-platform```
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
